@@ -94,14 +94,22 @@ developed to address:
 * Enhanced and enriched user experience,
 * Resetting the original and poorly written code and,
 * Wiping the slate clean of the increasingly sordid user 
-  experience associated with the Zenosaga.com during the tail-
-  end of its service.
+  experience associated with Zenosaga.com during the tail-end 
+  of its service.
 
 ==============================================================
 * Some project ideas for users of this release:
 ==============================================================
 
+The release of the Zenosaga.com source is first and foremost, for
+educational purpose only. It is released to for old time fans of
+the web site that are curious to learn how the back-end of the
+site worked. However, I do encourage that the code be put into
+good use. Some possible ideas for projects:
+
+* Re-launch Zenosaga on your own host or server.
 * Create a new, fresh and modern Xenogears or Xenosaga fan site.
+* Create your own special interest site base on Zenosaga.com codes.
 * Optimize the PHP codes so that it is compatible with PHP 5.
 * Create a Xenogears|Xenosaga-based Social Network extension, i.e
   finish what the "Eldridge Skylines" aimed to accomplish.
