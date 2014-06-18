@@ -8,38 +8,45 @@ members of the Zenosaga.com community. I don't guarantee
 that anything in this release will work or parse properly 
 when served using the latest production deployment of LAMP
 and then opened in contemporary browsers. Besides code 
-clean-up and packaging the original source codes haven't 
+clean-up and packaging, the original source codes haven't 
 been touched since late 2005. I began writing the original 
 Zenosaga.com source codes in 1998 around age 19 and throughout 
 my early 20's as a vehicle to learn PHP while I was still 
-majoring in Computer Science in college. Some of you may be 
-aware of Zenosaga.com's unreleased successor, the ORMUS 
-Society, aka Zenosaga 3.0. That was an entirely separate 
-project in itself, built completely from the ground up and 
-using knowledge that was harvested from operating 
-Zenosaga.com for 4.5 years. The codebase for the ORMUS 
-Society is completely different than that of Zenosaga.com. 
+majoring in Computer Science in college. This means the
+code for Zenosaga.com you see in this release still contains 
+the original codes from 1998. As additional sections and 
+features were added to the site, so were their respective
+codes added to existing functions.
+
+Some of you may be aware of Zenosaga.com's unreleased successor, 
+the ORMUS Society, aka Zenosaga 3.0. That was an entirely 
+separate project in itself, built completely from the 
+ground up and using knowledge that was harvested from 
+operating Zenosaga.com for 4.5 years. The codebase for the 
+ORMUS Society is completely different than that of Zenosaga.com. 
 I began writing the codebase for the ORMUS- Society around 
 mid 2004, when a noticeable drop in the frequency of 
 updates to the original Z became apparent to the general 
-public.
+public. 
  
 The source code release for Zenosaga.com only contains the
 PHP codes and necessary index.html files; no associated
 resources or assets such as images, SQL databases (table 
 schemas, however, are included as text files) or other media 
-files are packaged. I haven't looked at the original Zenosaga.com
-source codes since I closed it down in 2006 and would be
-embarrassed to compare my coding style of yore to my coding
-style of today. I probably would not be able to address any 
-questions regarding functions or classes surrounding this 
-release. Having a large collection of codes such as that of 
-Zenosaga.com lying stagnant around for more than a decade tends 
-to create a self-inflicted form of amnesia, know what I'm saying? 
+files are packaged. If I have time, I may eventually clean
+up the site's assets and release them at a later time.
+I haven't looked at the original Zenosaga.com source codes 
+since I closed the site down in 2006 and I would be embarrassed to 
+compare my coding style of yore to my coding style of today. 
+I probably would not be able to address any questions regarding 
+functions or classes surrounding this release. Having a large 
+collection of codes such as that of Zenosaga.com lying stagnant 
+around for more than a decade tends to create a self-inflicted 
+form of amnesia, know what I'm saying? 
  
 The original project was written and designed around PHP 4,
 powered by Zend Engine 1.0. On the grounds of HTML and
-CSS 2, it was designed around Internet Explorer 6 - which at 
+CSS 2. It was designed around Internet Explorer 6 - which at 
 the time dominated Internet usage with over 90% adoption rate.
 
 ==============================================================
@@ -48,7 +55,9 @@ the time dominated Internet usage with over 90% adoption rate.
 
 Some of the functions and classes written included redundant
 codes that could've been re-written to perform their functions 
-more efficiently and less of a resource hog.
+more efficiently and less of a resource hog. The ORMUS Society
+addressed this in a more elegant coding style. Most of these
+redundancy and sloppy coding were due meeting deadlines.
 
 Plenty of resource-intensive functions, especially the PW and
 Download Center sections, that made use of the dynamic file
@@ -64,41 +73,44 @@ include() and require() statements.
  
 Insecure form of session tracking, which was sufficient for the
 site's primary use (i.e primitive language selection, theme-
-selection, MyEHQ settings, etc.) but should never be used in an 
+selection, MyEHQ settings, etc.) but should never be used in a 
 production e-commerce environment.
 
 Lots of unnecessary class / object extensions. Subsections of
 the main site, such as individual Xenosaga Episode pages
-extends up to three sub-level of the main class.
+extends up to three sub-level of the main page class, for
+example.
 
 Lots of on-the-fly code bandaging and patch-up throughout the
 course of Zenosaga.com's life cycle, this includes incomplete 
-features for overtly ambitious features (i.e. U.M.N. Network, 
+features for overtly ambitious attempts (i.e. U.M.N. Network, 
 Eldridge Skylines, etc.,).
 
-These are some of the areas that the initiated the development
+These are some of the areas that initiated the development
 of the ORMUS Society and that which the ORMUS Society was
 developed to address:
 
-Code efficiency and an enhanced, enriched user experience;
-resetting the original and poorly written code and wiping the 
-slate clean of the increasingly sordid user experience 
-associated with the Zenosaga.com during the tail-end of its
-service.
+* Code efficiency, 
+* Enhanced and enriched user experience,
+* Resetting the original and poorly written code and,
+* Wiping the slate clean of the increasingly sordid user 
+  experience associated with the Zenosaga.com during the tail-
+  end of its service.
 
 ==============================================================
-* Some project ideas for users of this code release:
+* Some project ideas for users of this release:
 ==============================================================
 
 * Create a new, fresh and modern Xenogears or Xenosaga fan site.
 * Optimize the PHP codes so that it is compatible with PHP 5.
 * Create a Xenogears|Xenosaga-based Social Network extension, i.e
   finish what the "Eldridge Skylines" aimed to accomplish.
+* Create a version of the site that is template-based.
 * Create a mobile platform-optimized Zenosaga.com site.
 * Create a multi-lingual site (Z's ambition, realized in the 
   unreleased ORMUS Society)
 * Re-build Zenosaga.com with modern day web technology, e.g.
-  HTML5, CSS over tables, etc.
+  HTML5, CSS over <table></table>, <font=""></font>, etc.
 
 Share your creative use of the open source release with the
 rest of the Zenosaga.com community on our Facebook page:
@@ -114,3 +126,4 @@ Zenosaga.com
 zenosaga1@gmail.com
 
 eof.10.04.2013
+updated.06.18.2014
