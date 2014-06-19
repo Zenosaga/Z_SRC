@@ -102,10 +102,15 @@ developed to address:
 ==============================================================
 
 The release of the Zenosaga.com source is first and foremost, for
-educational purpose only. It is released to for old time fans of
+educational purpose only. It is released to old time fans of
 the web site that are curious to learn how the back-end of the
-site worked. However, I do encourage that the code be put into
-good use. Some possible ideas for projects:
+site worked and explore how web technologies have evolved since
+then. Because this is free and unencumbered code released into 
+the public domain, anyone is free to copy, modify, publish, use, 
+compile, sell, or distribute this code, either in source code 
+form or as a compiled binary, for any purpose, commercial or non-
+commercial, and by any means. I do encourage that the code be 
+put into good and creative use. Some possible ideas for projects:
 
 * Re-launch Zenosaga on your own host or server.
 * Create a new, fresh and modern Xenogears or Xenosaga fan site.
