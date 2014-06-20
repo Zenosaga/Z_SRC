@@ -15,8 +15,8 @@
 //
 // Require once:
 //    db_config.php	- database configurations.
-//    db_fns.php		- database functions.
-//    err_fns.php		- error handling functions.
+//    db_fns.php	- database functions.
+//    err_fns.php	- error handling functions.
 //
 ////////////////////////////////////////////////////////////////////////////////////////////
 
