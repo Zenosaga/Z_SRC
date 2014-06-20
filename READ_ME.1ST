@@ -81,6 +81,8 @@ the main site, such as individual Xenosaga Episode pages
 extends up to three sub-level of the main page class, for
 example.
 
+Lots of unnecessary switches.
+
 Lots of on-the-fly code bandaging and patch-up throughout the
 course of Zenosaga.com's life cycle, this includes incomplete 
 features for overtly ambitious attempts (i.e. U.M.N. Network, 
@@ -96,6 +98,9 @@ developed to address:
 * Wiping the slate clean of the increasingly sordid user 
   experience associated with Zenosaga.com during the tail-end 
   of its service.
+  
+ Also, the "last updated" field on some function files are not
+ accurate. I got lazy as time progressed.
 
 ==============================================================
 * Some project ideas for users of this release:
@@ -139,4 +144,4 @@ Zenosaga.com
 zenosaga1@gmail.com
 
 eof.10.04.2013
-updated.06.18.2014
+updated.06.19.2014
