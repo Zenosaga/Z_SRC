@@ -176,34 +176,33 @@ function parse_bestiary_data($episode="1", $q)
 			$bestObj->attacks = "Not Available";
 		}
 		
-		$map = array ("%%%name%%%"	=> $bestObj->name,
-					  "%%%filename%%%"	  	  => 
-					  "<img src=http://www.zenosaga.com/global/gfx/bestiary.php?episode=1&f=1&filename=".
-					  $bestObj->filename.">",
-					  "%%%hp%%%" 			  => $bestObj->hp,
-					  "%%%str%%%" 			  => $bestObj->str,
-					  "%%%vit%%%" 			  => $bestObj->vit,
-					  "%%%eatk%%%"			  => $bestObj->eatk,
-					  "%%%edef%%%"			  => $bestObj->edef,
-					  "%%%eva%%%"			  => $bestObj->eva,
-					  "%%%dex%%%"			  => $bestObj->dex,
-					  "%%%agl%%%"			  => $bestObj->agl,
-					  "%%%element%%%"		  => $bestObj->element,
-					  "%%%weakness%%%"	 	  => $bestObj->weakness,
-					  "%%%area%%%"		  	  => $bestObj->area,
-					  "%%%exp%%%"		    	  => $bestObj->exp,
-					  "%%%gold%%%"		  	  => $bestObj->money,
-					  "%%%tpt%%%" 			  => $bestObj->tpt,
-					  "%%%ept%%%"	  	  	  => $bestObj->ept,
-					  "%%%spt%%%"		    	  => $bestObj->spt,
-					  "%%%item_normal%%%"		  => $bestObj->item_normal,
-					  "%%%item_rare%%%"		  => $bestObj->item_rare,
-					  "%%%ds%%%"		    	  => $bestObj->ds,
-					  "%%%mgroup%%%"		  => parse_groups($bestObj->mgroup),
-					  "%%%descript%%%"		  => $bestObj->descript,
-					  "%%%type%%%"			  => parse_icons($bestObj->type),
-					  "%%%notes%%%"			  => $bestObj->notes,
-					  "%%%attacks%%%"		  => parse_attacks($bestObj->attacks));
+		$map = array ("%%%name%%%"			  => $bestObj->name,
+		   	      "%%%filename%%%"	  	  	  => 
+				  "<img src=http://www.zenosaga.com/global/gfx/bestiary.php?episode=1&f=1&filename=".
+				  $bestObj->filename.">",
+			      "%%%hp%%%" 			  => $bestObj->hp,
+			      "%%%str%%%" 			  => $bestObj->str,
+			      "%%%vit%%%" 			  => $bestObj->vit,
+			      "%%%eatk%%%"			  => $bestObj->eatk,
+			      "%%%edef%%%"			  => $bestObj->edef,
+			      "%%%eva%%%"			  => $bestObj->eva,
+			      "%%%dex%%%"			  => $bestObj->dex,
+			      "%%%agl%%%"			  => $bestObj->agl,
+			      "%%%element%%%"			  => $bestObj->element,
+			      "%%%weakness%%%"	 		  => $bestObj->weakness,
+			      "%%%area%%%"		  	  => $bestObj->area,
+			      "%%%exp%%%"		    	  => $bestObj->exp,
+			      "%%%gold%%%"		  	  => $bestObj->money,
+			      "%%%tpt%%%" 			  => $bestObj->tpt,
+			      "%%%ept%%%"	  	  	  => $bestObj->ept,
+			      "%%%spt%%%"		    	  => $bestObj->spt,
+			      "%%%item_normal%%%"		  => $bestObj->item_normal,
+			      "%%%item_rare%%%"			  => $bestObj->item_rare,
+			      "%%%ds%%%"		    	  => $bestObj->ds,
+			      "%%%mgroup%%%"			  => parse_groups($bestObj->mgroup),					  "%%%descript%%%"		  => $bestObj->descript,
+			      "%%%type%%%"			  => parse_icons($bestObj->type),
+			      "%%%notes%%%"			  => $bestObj->notes,
+			      "%%%attacks%%%"			  => parse_attacks($bestObj->attacks));
 
     // replaces bestiary template with values returned by function
 		$replace .= strtr($template, $map);
