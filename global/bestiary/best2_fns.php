@@ -150,7 +150,6 @@ function parse_bestiary_data($episode="1", $q)
       $file = "/zenosaga.com/httpdocs/templates/xg_bestiary_full.php";
       break;
 
-
     // Xenosaga Pied Piper
     case 99:
       $file = "/zenosaga.com/httpdocs/templates/xs_ppied_bestiary_full.php";
