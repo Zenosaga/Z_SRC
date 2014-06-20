@@ -13,7 +13,7 @@
 //
 // Require once:
 //    vars.php			- file containing environment variables.
-//    db_config.php	- database configurations.
+//    db_config.php		- database configurations.
 //    db_fns.php		- database functions.
 //
 ////////////////////////////////////////////////////////////////////////////////////////////
