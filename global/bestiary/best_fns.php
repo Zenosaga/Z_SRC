@@ -326,12 +326,11 @@ function get_bestiary($enemy = "", $continent = "", $area = "", $type = "", $ite
 ////////////////////////////////////////////////////////////////////////////////////////////
 //
 // Parameter:
-//    $best_array - An array.
+//    $best_array - An array $best_array returned by function best_2_array ().
 //
 // Usage:
-//    This function searches the viewer's cookie file for the "toplogo"
-//    parameter.  It then takes this value and prints out the corresponding
-//    toplogo images from the toplogo directory based on the value.
+//    This function parses the nested array of enemey attributes returned by function
+//    best_2_array () and prints it out in a readable HTML table to the browser.
 //
 ////////////////////////////////////////////////////////////////////////////////////////////
 
