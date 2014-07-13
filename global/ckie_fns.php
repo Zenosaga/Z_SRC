@@ -136,17 +136,21 @@ function epilogo($etype)
 		case '2':
 		case '02':
 			echo "<td align=right><a href='http://www.zenosaga.com/ep_02/?'>
-			      <img src='/_imgs-xs2/img-log1.jpg' width='385' height='100' border='0'></a></td>";
+			      <img src='/_imgs-xs2/img-log1.jpg' width='385' height='100' border='0'>
+			      </a></td>";
 			echo "<td align=left><a href='http://www.zenosaga.com/ep_02/?'>
-			      <img src='/_imgs-xs2/img-log2.jpg' width='385' height='100' border='0'></a></td>";
+			      <img src='/_imgs-xs2/img-log2.jpg' width='385' height='100' border='0'>
+			      </a></td>";
 			break;
 
 		case '5':
 		case '05':
 			echo "<td align=right><a href='http://www.zenosaga.com/ep_05/?'>
-			      <img src='".XGIMG."img-log1.jpg' width='385' height='100' border='0'></a></td>";
+			      <img src='".XGIMG."img-log1.jpg' width='385' height='100' border='0'>
+			      </a></td>";
 			echo "<td align=left><a href='http://www.zenosaga.com/ep_05/?'>
-			      <img src='".XGIMG."img-log2.jpg' width='385' height='100' border='0'></a></td>";
+			      <img src='".XGIMG."img-log2.jpg' width='385' height='100' border='0'>
+			      </a></td>";
 			break;
 
 		default:
@@ -240,20 +244,20 @@ function zunsetallcookie()
   	@setcookie("userhash", "", time()+31536000, "/", ".zenosaga.com", "0");	// Unique userhash
 
 // Set personal preference cookies
-	  @setcookie("lang", "", time()+31536000, "/", ".zenosaga.com", "0");
-	  @setcookie("toplogo", "", time()+31536000, "/", ".zenosaga.com", "0");
-	  @setcookie("mainlogo", "", time()+31536000, "/", ".zenosaga.com", "0");
-	  @setcookie("archivenews", "", time()+31536000, "/", ".zenosaga.com", "0");
-	  @setcookie("headlines", "", time()+31536000, "/", ".zenosaga.com", "0");
-	  @setcookie("subsite", "", time()+31536000, "/", ".zenosaga.com", "0");
-	  @setcookie("images_wt", "", time()+31536000, "/", ".zenosaga.com", "0");
-	  @setcookie("images_best", "", time()+31536000, "/", ".zenosaga.com", "0");
-	  @setcookie("color", "", time()+31536000, "/", ".zenosaga.com", "0");
-	  @setcookie("timezoneoffset", "", time()+31536000, "/", ".zenosaga.com", "0");
-    @setcookie("bbstyleid", "", time()+31536000, "/", ".zenosaga.com", "0");
-    @setcookie("bbuserid", "", time()+31536000, "/", ".zenosaga.com", "0");
-    @setcookie("bbpassword", "", time()+31536000, "/", ".zenosaga.com", "0");
-    @setcookie("sessionhash", "", time()+31536000, "/", ".zenosaga.com", "0");
+	@setcookie("lang", "", time()+31536000, "/", ".zenosaga.com", "0");
+	@setcookie("toplogo", "", time()+31536000, "/", ".zenosaga.com", "0");
+	@setcookie("mainlogo", "", time()+31536000, "/", ".zenosaga.com", "0");
+	@setcookie("archivenews", "", time()+31536000, "/", ".zenosaga.com", "0");
+	@setcookie("headlines", "", time()+31536000, "/", ".zenosaga.com", "0");
+	@setcookie("subsite", "", time()+31536000, "/", ".zenosaga.com", "0");
+	@setcookie("images_wt", "", time()+31536000, "/", ".zenosaga.com", "0");
+	@setcookie("images_best", "", time()+31536000, "/", ".zenosaga.com", "0");
+	@setcookie("color", "", time()+31536000, "/", ".zenosaga.com", "0");
+	@setcookie("timezoneoffset", "", time()+31536000, "/", ".zenosaga.com", "0");
+	@setcookie("bbstyleid", "", time()+31536000, "/", ".zenosaga.com", "0");
+	@setcookie("bbuserid", "", time()+31536000, "/", ".zenosaga.com", "0");
+	@setcookie("bbpassword", "", time()+31536000, "/", ".zenosaga.com", "0");
+	@setcookie("sessionhash", "", time()+31536000, "/", ".zenosaga.com", "0");
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////
@@ -378,11 +382,11 @@ function loggedin_users()
 	                        WHERE lastactivity < $datecut");	
 
 	$query = "SELECT *
-			      FROM zenosaga_zenosaga.ehq_session";
+		  FROM zenosaga_zenosaga.ehq_session";
 		  
 	$query2 = "SELECT *
-			       FROM zenosaga_vbulletin.session
-			       WHERE lastactivity > ($now+150)";	
+		   FROM zenosaga_vbulletin.session
+		   WHERE lastactivity > ($now+150)";	
 
 	$result = @mysql_query($query);
 	$result2 = @mysql_query($query2);
@@ -419,8 +423,8 @@ function update_maxusers($logged)
 	$date_max = date('Y-m-d');
 
 	$query = "SELECT *
-			  FROM zenosaga_zenosaga.ehq_maxusers
-			  WHERE maxID = '1'";
+		  FROM zenosaga_zenosaga.ehq_maxusers
+		  WHERE maxID = '1'";
 	
 	$result = @mysql_query($query);
 	
