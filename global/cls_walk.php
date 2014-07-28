@@ -79,7 +79,7 @@ class walkthru extends subsite
 	function get_titles()
 	{
 		$query = "SELECT * FROM zenosaga_episode".$this->episode.
-					".walkthru_title WHERE status = '1'";
+				 ".walkthru_title WHERE status = '1'";
 		$result = @mysql_query($query);
 		
 		while ($titleObj = @mysql_fetch_object($result))
@@ -173,8 +173,7 @@ class walkthru extends subsite
 		
 //		db_connect("zenosaga_episode".$this->episode);
 		
-		$query = "SELECT *
-				  FROM zenosaga_episode".$this->episode.".walkthru_disc".$this->walkthru_disc."
+		$query = "SELECT * FROM zenosaga_episode".$this->episode.".walkthru_disc".$this->walkthru_disc."
 				  WHERE wID = $this->walkthruID
 				  ORDER BY swID ASC";
 		
@@ -243,8 +242,10 @@ class walkthru extends subsite
 				 "[/y]" 			=> "</span>",
 				 "[r]"				=> "<span style='color: red; font-weight: bold;'>",
 				 "[/span]"			=> "</span>",
-				 "%rare%"			=> "<img src=\"/_imgs-st/img-key.gif\" width=\"10\" height=\"10\">",
-				 "%key%"			=> "<img src=\"/_imgs-st/img-tip.gif\" width=\"15\" height=\"15\">");
+				 "%rare%"			=> "<img src=\"/_imgs-st/img-key.gif\" width=\"10\" 
+				 					    height=\"10\">",
+				 "%key%"			=> "<img src=\"/_imgs-st/img-tip.gif\" width=\"15\" 
+				 			    		height=\"15\">");
 	
 	echo strtr(nl2br($wtObj->walkthru), $map);
 ?>
@@ -267,7 +268,6 @@ class walkthru extends subsite
 //
 ////////////////////////////////////////////////////////////////////////////////////////////
 
-
 	function get_characters()
 	{
 //		db_connect("zenosaga_episode".$this->episode);
@@ -284,12 +284,13 @@ class walkthru extends subsite
 		switch ($this->episode)
 		{
 			case '1':
-				$map = array('1'=>'5', '2'=>'3', '3'=>'1', '4'=>'6', '5'=>'4', '6'=>'2');
+				$map = array('1'=>'5', '2'=>'3', '3'=>'1', '4'=>'6', 
+						     '5'=>'4', '6'=>'2');
 				break;
 				
 			case '5':
-				$map = array('1'=>'6', '2'=>'4', '3'=>'3', '4'=>'1', '5'=>'8', '6'=>'2', '7'=>'7', 
-								'8'=>'9', '9'=>'5');
+				$map = array('1'=>'6', '2'=>'4', '3'=>'3', '4'=>'1', '5'=>'8', 
+						     '6'=>'2', '7'=>'7', '8'=>'9', '9'=>'5');
 				break;
 		}
 		
@@ -300,17 +301,18 @@ class walkthru extends subsite
 			switch($row_explode[$i])
 			{
 				case 0:
-						echo "<a href=\"http://www.zenosaga.com/ep_0".
-								$this->episode."/char/?charID=".$mapped."\">";
-						echo "<img src=\"/ep_0".$this->episode."/walkthru/images/0_0".
-								($i+1).".gif\" width=\"32\" height=\"32\" border=\"0\"></a><br>";
+					echo "<a href=\"http://www.zenosaga.com/ep_0".
+					      $this->episode."/char/?charID=".$mapped."\">";
+					echo "<img src=\"/ep_0".$this->episode."/walkthru/images/0_0".
+					      ($i+1).".gif\" width=\"32\" height=\"32\"
+					      border=\"0\"></a><br>";
 					break;
 				
 				default:
-						echo "<a href=\"http://www.zenosaga.com/ep_0".$this->episode.
-								"/char/?charID=".$mapped."\">";
-						echo "<img src=\"/ep_0".$this->episode."/walkthru/images/1_0".($i+1).
-								".gif\" width=\"32\" height=\"32\" border=\"0\"></a><br>";
+					echo "<a href=\"http://www.zenosaga.com/ep_0".$this->episode.
+					      "/char/?charID=".$mapped."\">";
+					echo "<img src=\"/ep_0".$this->episode."/walkthru/images/1_0".($i+1).
+					     ".gif\" width=\"32\" height=\"32\" border=\"0\"></a><br>";
 					break;
 			} // end switch
 		} // end for
@@ -329,7 +331,7 @@ class walkthru extends subsite
 //		db_connect("zenosaga_episode".$this->episode);
 		
 		$query = "SELECT *  FROM zenosaga_episode".$this->episode.".walkthru_title
-			  WHERE wID = '$this->walkthruID'";
+				  WHERE wID = '$this->walkthruID'";
 		
 		$result = @mysql_query($query);
 		
@@ -402,8 +404,7 @@ class walkthru extends subsite
 			case '1':
 //				db_connect("zenosaga_episode".$this->episode);
 		
-				$query = "SELECT *
-						  FROM zenosaga_episode".$this->episode.".walkthru_title
+				$query = "SELECT * FROM zenosaga_episode".$this->episode.".walkthru_title
 						  WHERE wID = '$this->walkthruID
 						  AND dID = $this->walkthru_disc'";
 				
@@ -466,10 +467,9 @@ class walkthru extends subsite
 	
 	function get_items()
 	{
-		$query = "SELECT *
-				  FROM zenosaga_episode".$this->episode.".walkthru_items
+		$query = "SELECT * FROM zenosaga_episode".$this->episode.".walkthru_items
 				  WHERE wID = '$this->walkthruID'
-				  AND dID = '$this->walkthru_disc'";
+			 	  AND dID = '$this->walkthru_disc'";
 		
 		$result = @mysql_query($query);
 		$result2= @mysql_result($result,0, "items");
@@ -495,7 +495,8 @@ class walkthru extends subsite
 	{
 		db_connect();
 		
-		$query = "SELECT * FROM zenosaga_episode".$this->episode.".bestiary_en WHERE eID = '".$eID."'";
+		$query = "SELECT * FROM zenosaga_episode".$this->episode.".bestiary_en 
+			  	  WHERE eID = '".$eID."'";
 		$result = @mysql_query($query);
 		
 		$enemyObj = @mysql_fetch_object($result);
@@ -523,7 +524,8 @@ class walkthru extends subsite
 				$template = fread($fh, filesize($file));
 				fclose($fh);
 				
-				$query = "SELECT * FROM zenosaga_episode1.walkthru_bestiary WHERE wID = '".$this->walkthruID."'";
+				$query = "SELECT * FROM zenosaga_episode1.walkthru_bestiary 
+						  WHERE wID = '".$this->walkthruID."'";
 				$result = mysql_query($query);
 				$total = mysql_num_rows($result);
 				
@@ -544,18 +546,17 @@ class walkthru extends subsite
 					{
 						$enemyInfo = $this->parse_bestiary($e_array[$i]);
 						$map =  array ("%%%NAME%%%"			=> $enemyInfo->name,
-										"%%%IMAGE%%%" 			=> "<img src=\"/global/gfx/bestiary.php?episode=".
-																	$this->episode."&filename=".$enemyInfo->filename."\">",
-										"%%%HP%%%" 			=> $enemyInfo->hp,
-										"%%%EXP%%%"	 		=> $enemyInfo->exp,
-										"%%%GOLD%%%" 			=> $enemyInfo->money,
-										"%%%TPT%%%"	 		=> $enemyInfo->tpt,
-										"%%%SPT%%%"	 		=> $enemyInfo->spt,
-										"%%%EPT%%%"	 		=> $enemyInfo->ept,
-										"%%%ITEM_NORMAL%%%"	=> $enemyInfo->item_normal,
-										"%%%ITEM_RARE%%%" 		=> $enemyInfo->item_rare,
-										"%%%NOTES%%%" 			=> $enemyInfo->weakness);
-
+							    	   "%%%IMAGE%%%" 		=> "<img src=\"/global/gfx/bestiary.php?episode=".
+												    		   $this->episode."&filename=".$enemyInfo->filename."\">",
+							       	   "%%%HP%%%" 			=> $enemyInfo->hp,
+							       	   "%%%EXP%%%"	 		=> $enemyInfo->exp,
+							       	   "%%%GOLD%%%" 		=> $enemyInfo->money,
+							           "%%%TPT%%%"	 		=> $enemyInfo->tpt,
+							           "%%%SPT%%%"	 		=> $enemyInfo->spt,
+							           "%%%EPT%%%"	 		=> $enemyInfo->ept,
+							           "%%%ITEM_NORMAL%%%"	=> $enemyInfo->item_normal,
+							           "%%%ITEM_RARE%%%" 	=> $enemyInfo->item_rare,
+							           "%%%NOTES%%%" 		=> $enemyInfo->weakness);
 						$replace .= strtr($template, $map);
 						$i++;
 					} // end while
@@ -576,8 +577,7 @@ class walkthru extends subsite
 	{
 //		db_connect("zenosaga_episode".$this->episode);
 		
-		$query = "SELECT *
-				  FROM zenosaga_episode".$this->episode.".items_treasures
+		$query = "SELECT * FROM zenosaga_episode".$this->episode.".items_treasures
 				  WHERE wID = '$this->walkthruID'
 				  ORDER BY item ASC";
 		
@@ -616,16 +616,17 @@ class walkthru extends subsite
 	
 	function get_daggers()
 	{
-		$query = "SELECT *
-				  FROM zenosaga_episode".$this->episode.".walkthru_title
-				  WHERE wID = '$this->walkthruID'";
+		$query = "SELECT * FROM zenosaga_episode".$this->episode.".walkthru_title
+			  WHERE wID = '$this->walkthruID'";
 		
 		$result = mysql_query($query);
 		$daggerObj = mysql_fetch_object($result);
 		
 		if($daggerObj->dagger != 0)
 		{
-			echo '<a href="http://www.zenosaga.com/daggers/script.php?eID='.$this->episode.'&sID='.$daggerObj->dagger.'"><img src="/images/ico_dagr.gif" height="32" border="0"></a>';
+			echo '<a href="http://www.zenosaga.com/daggers/script.php?eID='.$this->episode.
+			      '&sID='.$daggerObj->dagger.'"><img src="/images/ico_dagr.gif" height="32" 
+			      border="0"></a>';
 		}
 	}
 	
