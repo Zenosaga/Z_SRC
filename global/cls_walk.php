@@ -547,7 +547,7 @@ class walkthru extends subsite
 						$enemyInfo = $this->parse_bestiary($e_array[$i]);
 						$map =  array ("%%%NAME%%%"			=> $enemyInfo->name,
 							    	   "%%%IMAGE%%%" 		=> "<img src=\"/global/gfx/bestiary.php?episode=".
-												    		   $this->episode."&filename=".$enemyInfo->filename."\">",
+										    		   $this->episode."&filename=".$enemyInfo->filename."\">",
 							       	   "%%%HP%%%" 			=> $enemyInfo->hp,
 							       	   "%%%EXP%%%"	 		=> $enemyInfo->exp,
 							       	   "%%%GOLD%%%" 		=> $enemyInfo->money,
@@ -572,14 +572,21 @@ class walkthru extends subsite
 				break;
 		} // end switch
 	} // end get_bestiary();
-	
+
+////////////////////////////////////////////////////////////////////////////////////////////
+//
+// void get_treasures (void)
+//	Retrieves list of available treasures for current walkthrough chapter
+//
+////////////////////////////////////////////////////////////////////////////////////////////
+
 	function get_treasures()
 	{
 //		db_connect("zenosaga_episode".$this->episode);
 		
 		$query = "SELECT * FROM zenosaga_episode".$this->episode.".items_treasures
-				  WHERE wID = '$this->walkthruID'
-				  ORDER BY item ASC";
+			  WHERE wID = '$this->walkthruID'
+			  ORDER BY item ASC";
 		
 		$result = @mysql_query($query);
 		
@@ -613,7 +620,14 @@ class walkthru extends subsite
   <?		
 		} // end if
 	} // end get_treasures
-	
+
+////////////////////////////////////////////////////////////////////////////////////////////
+//
+// void get_daggers (void)
+//	Retrieves crosslinked Daggers transcription of chapter (if available)
+//
+////////////////////////////////////////////////////////////////////////////////////////////
+
 	function get_daggers()
 	{
 		$query = "SELECT * FROM zenosaga_episode".$this->episode.".walkthru_title
@@ -631,6 +645,13 @@ class walkthru extends subsite
 	}
 	
 } // CLASS WALKTHRU
+
+////////////////////////////////////////////////////////////////////////////////////////////
+//
+// void get_title (int $ep, int $wID)
+//	Retrieves title of walkthrough chapter base on game $ep and chapter $wID
+//
+////////////////////////////////////////////////////////////////////////////////////////////
 
 	function get_title($ep, $wID)
 	{
