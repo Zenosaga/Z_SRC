@@ -34,7 +34,7 @@ FAQ
 <td width="273" class=defaulttext>
 Bloopers and miscellaneous files<br>
 IRC chat quotes and logs<br>
-Members' Lounge at Z Lobby<br>
+Members\' Lounge at Z Lobby<br>
 </td>
 </tr>
 
