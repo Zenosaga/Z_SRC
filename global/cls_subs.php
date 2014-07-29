@@ -15,7 +15,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////
 //
 // Require once:
-//    cls_page.php			- main Zenosaga page class constructor
+//    cls_page.php	- main Zenosaga page class constructor
 //
 ////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -31,22 +31,26 @@ class subsite extends page
 ////////////////////////////////////////////////////////////////////////////////////////////
 //
 // Return value:
-//		Returns no value
+//	Returns no value
 //
 ////////////////////////////////////////////////////////////////////////////////////////////
 //
 // Parameter:
-//		Not available
+//	Not available
 //
 // Usage:
 //    	This function prints the main content of a gaming sub-site, based on the game
-//		the viewer is currently accessing.
+//	the viewer is currently accessing.
 //
 ////////////////////////////////////////////////////////////////////////////////////////////
 
 function guts()
 {
 
+	/* take the URI that was used to access current page, ex. /ep_01/bestiary/index.html
+	   then create an array $guts_url that is delimited by "/". The first element of 
+	   $guts_url will determine the episode theme for the subpage.
+	*/
 	$guts_url = explode ("/", $GLOBALS['REQUEST_URI']);
 
 	switch ($guts_url[1])
@@ -249,16 +253,16 @@ function guts()
 ////////////////////////////////////////////////////////////////////////////////////////////
 //
 // Return value:
-//		Returns no value
+//	Returns no value
 //
 ////////////////////////////////////////////////////////////////////////////////////////////
 //
 // Parameter:
-//		Not available
+//	Not available
 //
 // Usage:
 //    	This function prints the gaming menu specific to the to the game	the viewer is 
-//		currently accessing. It makes use of SWITCH and cases as episodes.
+//	currently accessing. It makes use of SWITCH and cases as episodes.
 //
 ////////////////////////////////////////////////////////////////////////////////////////////
 
